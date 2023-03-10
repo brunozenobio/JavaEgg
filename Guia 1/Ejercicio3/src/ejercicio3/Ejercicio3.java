@@ -19,8 +19,12 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner read = new Scanner(System.in);
+        System.out.println("Ingrese una frase");
         String frase = read.nextLine();
+        System.out.println("Con todas sus letras en mayusculas es");
         System.out.println(frase.toUpperCase());
+        System.out.println();
+        System.out.println("Con todas sus letras en minusculas es");
         System.out.println(frase.toLowerCase());
     }
     

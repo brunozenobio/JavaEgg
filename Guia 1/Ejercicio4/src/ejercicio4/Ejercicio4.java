@@ -19,6 +19,8 @@ public class Ejercicio4 {
         // TODO code application logic here
         float gCent,gFh;
         Scanner read = new Scanner(System.in);
+        System.out.println("Este programa convierte grados centigrados en farenhient");
+        System.out.println("Ingrese temperatura en grados centigrados");
         gCent = read.nextFloat();
         gFh = 32 + ( 9 * gCent / 5 );
         System.out.println(gCent + " grados centigrados equivalen a " + gFh + " grados farenheint");

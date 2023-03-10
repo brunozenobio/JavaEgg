@@ -19,11 +19,12 @@ public class Ejercicio5 {
         // TODO code application logic here
         int a;
         Scanner read = new Scanner(System.in);
+        System.out.println("Ingrese un numero");
         a = read.nextInt();
         System.out.println("El numero a " + a );
         System.out.println("el doble de a es " + 2 * a);
         System.out.println("el triple de a es " + 3 * a);
-        System.out.println45("Y su raiz cuadrada es " + Math.sqrt(a));
+        System.out.println("Y su raiz cuadrada es " + Math.sqrt(a));
     }
     
 }

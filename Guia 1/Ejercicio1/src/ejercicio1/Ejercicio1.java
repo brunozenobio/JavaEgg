@@ -18,10 +18,14 @@ public class Ejercicio1 {
         // TODO code application logic here
         Scanner read = new Scanner(System.in);
         int a,b;
-        
-        
+        System.out.println("Este programa suma dos numeros");
+        System.out.println("Ingrese el primero");
         a= read.nextInt();
+        System.out.println("Ahora ingrese el segundo");
+        
+        
         b= read.nextInt();
+        System.out.println("La suma de los numeros es:");
         System.out.println(a+b);
     }
     
