@@ -3,6 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
 package ejercicio2;
 
 /**
@@ -19,7 +21,9 @@ public class Ejercicio2 {
         // TODO code application logic here
         Scanner read = new Scanner(System.in);
         System.out.println("Ingrese su nombre");
-        String name = read.nextLine();
+        String name = null;
+        name = read.nextLine()
+  
         System.out.println("Bienvenido " + name);
     }
     

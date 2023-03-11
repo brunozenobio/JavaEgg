@@ -10,6 +10,7 @@ package ejercicio4;
  * @author bruno
  */
 import java.util.Scanner;
+import java.util.InputMismatchException;
 public class Ejercicio4 {
 
     /**
@@ -24,6 +25,7 @@ public class Ejercicio4 {
         gCent = read.nextFloat();
         gFh = 32 + ( 9 * gCent / 5 );
         System.out.println(gCent + " grados centigrados equivalen a " + gFh + " grados farenheint");
+              
     }
     
 }

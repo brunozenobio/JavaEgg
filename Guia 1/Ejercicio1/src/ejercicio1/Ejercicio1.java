@@ -22,8 +22,6 @@ public class Ejercicio1 {
         System.out.println("Ingrese el primero");
         a= read.nextInt();
         System.out.println("Ahora ingrese el segundo");
-        
-        
         b= read.nextInt();
         System.out.println("La suma de los numeros es:");
         System.out.println(a+b);
