@@ -58,16 +58,14 @@ public class Ejercicio6 {
                 System.out.println(a / b);
                 break;
             case 5:
-                System.out.println("Esta seguro S/N");
+                System.out.println("Esta seguro de que desea salir del programa (S/N)?");
                 seg = read.nextLine();
                 break;
 
                 
         }
         
-        if(seg.equals("S")){
-            break;
-        }
+
         
     }while((!seg.equals("S")));
     

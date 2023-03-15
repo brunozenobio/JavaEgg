@@ -42,12 +42,12 @@ public class Ejercicio7 {
             secuencia = read.nextLine();
             if(secuencia.length() == 5){
                 if(secuencia.substring(0,1).equals("X") && secuencia.substring(secuencia.length() -1).equals("O")){
-                    sumaCorrect += 1;
+                    sumaCorrect++;
                 }else{
-                    sumaIncorrect += 1; 
+                    sumaIncorrect++; 
                 }
             }else{
-                sumaIncorrect += 1; 
+                sumaIncorrect++; 
             }
         }while(!secuencia.equals("&&&&&"));
         
