@@ -40,17 +40,16 @@ public class Ejercicio7 {
         do{
             System.out.println("Ingrese una secuencia RS232");
             secuencia = read.nextLine();
-            if(secuencia.length() == 5){
-                if(secuencia.substring(0,1).equals("X") && secuencia.substring(secuencia.length() -1).equals("O")){
-                    sumaCorrect++;
-                }else{
-                    sumaIncorrect++; 
-                }
+            if(secuencia.length() == 5 && secuencia.startsWith("X") && secuencia.endsWith("O")){
+                sumaCorrect++;
             }else{
                 sumaIncorrect++; 
             }
         }while(!secuencia.equals("&&&&&"));
         
+        
+    
+              
         System.out.println("El programa a finalizado y este tiene");
         System.out.println(sumaCorrect - 1 + " :secuencias correctas ");
         System.out.println(sumaIncorrect - 1 + " :secuencias incorrectas ");

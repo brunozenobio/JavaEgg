@@ -15,6 +15,7 @@ import java.util.Scanner;
 * 
  * @author bruno
  */
+
 public class Ejercicio14 {
      public static void main(String[] args){
         Scanner read = new Scanner(System.in);
@@ -32,6 +33,8 @@ public class Ejercicio14 {
              System.out.println("Familia " + i + " el promedio de edad de sus " + M + " hijos es");
              float promedio = ((float) sumaEdad) / ((float) M);
              System.out.println(promedio);
+             
+             String caden="hola";
              
          }
         
