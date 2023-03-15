@@ -44,7 +44,7 @@ public class Ejercicio2 {
         C = A;
         A = D;
         D = aux;
-        System.out.println("-----------");
+        System.out.println("-----------4");
         System.out.println("A:" + A);
         System.out.println("B:" + B);
         System.out.println("C:" + C);
