@@ -29,7 +29,7 @@ public class Teorica11 {
         String oracionCod = "";
         for (int i = 0; i < palabra.length(); i++) {
             String pal = palabra.substring(i,i+1);
-
+            pal = pal.toLowerCase();
             switch (pal) {
                 case "a":
                        oracionCod=oracionCod.concat("@");
