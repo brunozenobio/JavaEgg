@@ -28,12 +28,15 @@ public class Ejercicio3 {
         System.out.println("Ingrese la cantidad de euros");
         float euros = read.nextFloat();
         System.out.println("A que moneda desea convertir");
+        System.out.println("dolares");
+        System.out.println("yenes");
+        System.out.println("libras");
         String conversor = read.next();
         conversor = conversor.toLowerCase();
         convertir(euros,conversor);
         
     }
-    
+
     public static void convertir(float moneda,String monedaDestino){
         switch (monedaDestino) {
             case "dolares":
