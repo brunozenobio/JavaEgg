@@ -26,22 +26,26 @@ public class Ejercicio7 {
         float suma,promedio;
         suma = 0;
         
-        System.out.println("Ingrese el 1 valor" );
-        int valor = read.nextInt();
+
         
-        maximo = valor;
-        minimo = valor;
-        
+        maximo = 0;
+        minimo = 0;
+        int valor = 0;
         float tot = n;
-        
-        while(n > 0){
-            System.out.println("Ingrese el " + n + 1 + "valor" );
+        int cont = 0;
+        while(cont != n){
+            System.out.println("Ingrese el " + (cont + 1) + " valor" );
             valor = read.nextInt();
             suma += valor;
+            if(cont == 0){
+                minimo = valor;
+                maximo = valor;
+            }else{
+                maximo = Math.max(maximo, valor);
+                minimo = Math.min(minimo, valor);
+            }
             
-            maximo = Math.max(maximo, valor);
-            minimo = Math.min(minimo, valor);
-            n--;
+            cont++;
             
             
             

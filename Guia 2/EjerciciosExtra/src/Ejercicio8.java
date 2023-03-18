@@ -24,7 +24,8 @@ public class Ejercicio8 {
         int suma = 0,sumaPares = 0,sumaImpares = 0,valor;
         
         do{
-            System.out.println("Ingrese un numero, si este es multiplo de 5 se detendra la lectura");
+            System.out.println("Ingrese un numero, si este es multiplo de 5 s"
+                    + "e detendra la lectura");
             valor = read.nextInt();
             
             
