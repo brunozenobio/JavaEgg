@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -17,14 +20,14 @@ public class Ejercicio6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[][] matriz = new int[4][4];
+        Scanner read = new Scanner(System.in);
+        int[][] matriz = new int[3][3];
         boolean esAnt = true;
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
-                matriz[i][j] = (int) (Math.random()*10 - Math.random()*9);
-                System.out.println(matriz[i][j]);
+                
+                matriz[i][j] = read.nextInt();
             }
-            System.out.print("");
         }
         for (int[] fila:matriz) {
             for (int columna:fila) {
@@ -32,15 +35,24 @@ public class Ejercicio6 {
             } 
             System.out.println("");
         }
-        int contador = 0;
-        System.out.println("Traspuesta");
+        
+        System.out.println("-------");
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(-1 * matriz[j][i] + " ");
+            }
+            System.out.println("");
+        }
+        
+
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
+                
                 if(matriz[i][j] == -1 * matriz[j][i]){
-                    contador++;
-                }else{
                     esAnt = false;
                     break;
+                }else{
+                    
                 }
                     
             }

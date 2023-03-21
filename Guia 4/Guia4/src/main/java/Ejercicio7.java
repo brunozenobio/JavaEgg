@@ -15,6 +15,9 @@ import java.util.Scanner;
  *
  * @author bruno
  */
+
+
+
 public class Ejercicio7 {
 
     /**
@@ -23,17 +26,18 @@ public class Ejercicio7 {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
 
-        System.out.print("Ingrese el número de filas: ");
-        int filas = read.nextInt();
-        System.out.print("Ingrese el número de columnas: ");
-        int columnas = read.nextInt();
+        
 
-        int[][] matriz = new int[filas][columnas];
+        int[][] matriz = new int[3][3];
         System.out.println("Ingrese los elementos de la matriz:");
 
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                matriz[i][j] = read.nextInt();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                do {
+                    System.out.println("Ingrese el valor matriz["+i+"]["+j+"]" );
+                    matriz[i][j] = read.nextInt();
+                } while (matriz[i][j]<1 || matriz[i][j]>9);
+                
             }
         }
 
@@ -42,19 +46,19 @@ public class Ejercicio7 {
         int sumaDiagonal2 = 0;
 
         // Calcular la suma de la diagonal principal y secundaria
-        for (int i = 0; i < filas; i++) {
+        for (int i = 0; i < 3; i++) {
             sumaDiagonal1 += matriz[i][i];
-            sumaDiagonal2 += matriz[i][columnas - i - 1];
+            sumaDiagonal2 += matriz[i][3 - i - 1];
         }
 
         // Verificar si la suma de las filas, columnas y diagonales es igual
         if (sumaDiagonal1 != sumaDiagonal2) {
             esMagica = false;
         }
-        for (int i = 0; i < filas; i++) {
+        for (int i = 0; i < 3; i++) {
             int sumaFila = 0;
             int sumaColumna = 0;
-            for (int j = 0; j < columnas; j++) {
+            for (int j = 0; j < 3; j++) {
                 sumaFila += matriz[i][j];
                 sumaColumna += matriz[j][i];
             }
