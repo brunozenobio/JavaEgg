@@ -47,17 +47,18 @@ public class Extra6 {
         completar(sopaLetras);
         for (String[] elemento:sopaLetras) {
             for (String elemento2:elemento) {
-                System.out.print(elemento2);
+                System.out.print("[" + elemento2 + "]");
             }
             System.out.println();
         }
     }
     public static String[][] agregarPalabra(String[][] sopaLetras,String palabra){
         String pal = null;
+        int col = (int) (Math.random() * 15);
          int fila = (int) (Math.random() * sopaLetras.length);
             for (int j = 0; j < palabra.length(); j++) {
                 pal = palabra.substring(j,j+1);
-                sopaLetras[fila][j] = pal;
+                sopaLetras[fila][j + col] = pal;
             }
             
         return sopaLetras;
@@ -73,5 +74,7 @@ public class Extra6 {
         }
         return sopaLetras;
     }
+    
+    
     
 }
