@@ -26,19 +26,20 @@
 
         //METODO SERVIR TAZA
 
-        public Cafetera servirTaza(int capTaza,Cafetera caf1){
+        public void servirTaza(int capTaza,Cafetera caf1){
             System.out.println("La taza deseada tiene " + capTaza + " miliitros de capacidad");
             System.out.println("Se servira cafe en la taza");
             if(caf1.getCantidadActual() < capTaza){
                 System.out.println("La cantidad actual de cafe es menor a la capacidad de la taza");
                 System.out.println("Se ah servido la taza con " + caf1.getCantidadActual() + "mililitros");
+                caf1.setCantidadActual(0);
             }else{
                 System.out.println("Sirviendo taza......");
                 System.out.println("La taza se ah llenado");
                 caf1.setCantidadActual(caf1.getCantidadActual() - capTaza);
 
             }
-            return caf1;
+            
         }
 
         //METODO VACIAR CAFETERA
@@ -47,7 +48,7 @@
             caf.setCantidadActual(0);
             System.out.println("Vaciando cafetera");
         }
-
+    
         //METODO AGREGAR CAFETERA
 
         public void agregarCafe(Cafetera caf){
