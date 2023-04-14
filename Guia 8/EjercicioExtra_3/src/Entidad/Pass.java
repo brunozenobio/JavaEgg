@@ -102,6 +102,6 @@ public class Pass {
 
         }while (!this.pass.equals(pass));
         System.out.println("Ingrese el nombre: ");
-        this.dni = read.nextInt();
+        this.nombre = read.next();
     }
 }
