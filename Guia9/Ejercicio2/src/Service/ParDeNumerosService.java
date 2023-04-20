@@ -4,12 +4,12 @@ import Entidad.ParDeNumeros;
 
 public class ParDeNumerosService {
 
-    public void mostrarValores(ParDeNumeros p1){
+    public static void mostrarValores(ParDeNumeros p1){
         System.out.println("El valor de a = " + p1.getA());
         System.out.println("El valor de b = " + p1.getB());
     }
 
-    public void devolverMayor(ParDeNumeros p1){
+    public static void devolverMayor(ParDeNumeros p1){
         if(p1.getA() >  p1.getB()){
             System.out.println(p1.getA() + ">" + p1.getB());
         }else{
@@ -17,7 +17,7 @@ public class ParDeNumerosService {
         }
     }
 
-    public void calcularPotencia(ParDeNumeros p1){
+    public static void calcularPotencia(ParDeNumeros p1){
 
         double a = Math.round(p1.getA());
         double b = Math.round(p1.getB());
@@ -31,7 +31,7 @@ public class ParDeNumerosService {
         }
     }
 
-    public void calcularRaiz(ParDeNumeros p1){
+    public static void calcularRaiz(ParDeNumeros p1){
         double a = Math.abs(p1.getA());
         double b = Math.abs(p1.getB());
         System.out.println("La raiz cuadrada de A = " + p1.getA() + " es " + Math.pow(a,0.5));

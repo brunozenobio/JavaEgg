@@ -19,10 +19,17 @@ public class FechaService {
         return new Date();
     }
 
-    public void diferencia(Date fA,Date Nac){
-        System.out.print("La edad es: ");
-        System.out.println(fA.getYear() - Nac.getYear());
+    public int diferencia(Date fA,Date Nac){
+        int edad = fA.getYear() - Nac.getYear();
+
+        if(fA.getMonth() > Nac.getMonth()){
+            edad--;
+        }else if(fA.getMonth() == Nac.getMonth() && fA.getDate() < Nac.getDate()) {
+            edad--;
+        }
+        return edad;
 
 
-    }
+
+}
 }

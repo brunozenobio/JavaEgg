@@ -29,6 +29,13 @@ public class PersonaService {
     public int calcularEdad(Persona p1){
         Date fechaActual = new Date();
         int edad = fechaActual.getYear() - p1.getFechaDeNacimiento().getYear();
+        if(fechaActual.getMonth() > p1.getFechaDeNacimiento().getMonth()){
+            edad--;
+        }else if(fechaActual.getMonth() == p1.getFechaDeNacimiento().getMonth() && fechaActual.getDate() < p1.getFechaDeNacimiento().getDate()) {
+            edad--;
+        }
+
+
         return edad;
     }
 
