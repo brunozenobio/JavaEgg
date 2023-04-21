@@ -16,9 +16,9 @@ public class CadenaService {
     }
     public void mostrarVocales(Cadena c1){
         int contadorVocales = 0;
-        for (String letra:c1.getFrase().split("")) {
-            if(letra.equalsIgnoreCase("a") || letra.equalsIgnoreCase("e") || letra.equalsIgnoreCase("i") || letra.equalsIgnoreCase("o")
-            || letra.equalsIgnoreCase("u")){
+        String vocales = "aeiouAEIOU";
+        for (char letra: c1.getFrase().toCharArray()) {
+            if (vocales.contains(String.valueOf(letra))) {
                 contadorVocales++;
             }
         }
