@@ -72,32 +72,5 @@ public class Curso {
         this.alumnos = alumnos;
     }
 
-    public void cargarAlumno(){
-        String nombre;
-        for (int i = 0;i<alumnos.length;i++){
-            System.out.println("Ingrese el nombre del " + (i + 1) + " alumno");
-            nombre = read.next();
-            alumnos[i] = nombre;
-        }
-    }
-    public void crearCurso(){
-        System.out.println("Se esta creando un nuevo curso");
-        System.out.print("Nombre del curso: ");
-        setNombreurso(read.next());
-        System.out.print("Cantidad de Horas por dia: ");
-        setCantidadHorasPorDia(read.nextInt());
-        System.out.print("Cantidad de dias por semana: ");
-        setCantidadDiasPorSemana(read.nextInt());
-        System.out.print("Turno: ");
-        setTurno(read.next());
-        System.out.print("Precio por hora: ");
-        setPrecioPorHora(read.nextInt());
-        System.out.println("Ahora los alumnos que participan");
-        cargarAlumno();
-    }
 
-    public  void calcularGanaciaSemanal(){
-        System.out.println("Las ganancias seran de");
-        System.out.println(cantidadDiasPorSemana * cantidadHorasPorDia * precioPorHora * alumnos.length);
-    }
 }

@@ -1,9 +1,11 @@
 import Entidad.Curso;
+import Service.CursoService;
 
 public class Main {
     public static void main(String[] args) {
-        Curso curso1 = new Curso();
-        curso1.crearCurso();
-        curso1.calcularGanaciaSemanal();
+        CursoService cs = new CursoService();
+        Curso curso = cs.crearCurso();
+        cs.calcularGanaciaSemanal(curso);
+
     }
 }

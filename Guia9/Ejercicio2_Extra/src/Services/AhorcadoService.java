@@ -5,6 +5,7 @@ import Entidades.Ahorcado;
 import java.util.Scanner;
 
 public class AhorcadoService {
+    private String[] tablero;
     private Scanner read = new Scanner(System.in).useDelimiter("\n");
 
     public Ahorcado crearJuego(){
@@ -23,7 +24,7 @@ public class AhorcadoService {
 
        }
        juego.setPalabra(arrayPal);
-
+    
     return juego;
     }
 
@@ -59,11 +60,12 @@ public class AhorcadoService {
         int contadorEncontradas = 0;
         int cantidadIntentos = ahorcado.getCantidadDeJugadas();
 
-        for(String pal:ahorcado.getPalabra()){
-            if(pal.equalsIgnoreCase(letra)){
+        for(int i = 0;i<ahorcado.getPalabra().length;i++){
+            if(ahorcado.getPalabra()[i].equals(letra)){
                 contadorEncontradas++;
                 ahorcado.setLetrasRestantes(ahorcado.getLetrasRestantes() - 1);
                 seEncontraron = true;
+                this.tablero[i] = letra;
             }
         }
 
@@ -73,8 +75,12 @@ public class AhorcadoService {
         }
 
 
-        System.out.println("Se han encontrado " + contadorEncontradas + " letras, y le faltan " + ahorcado.getLetrasRestantes()  + " letras");
-
+        System.out.println("Se han encontrado " + contadorEncontradas + " letra/s.");
+        System.out.println("y le faltan " + ahorcado.getLetrasRestantes()  + " letras");
+        for(String letras:this.tablero){
+            System.out.print(letras);
+        }
+        System.out.println("");
 
 
     }
@@ -84,7 +90,9 @@ public class AhorcadoService {
     }
 
     public  void juego(Ahorcado ahorcado){
+        this.tablero = new String[ahorcado.getPalabra().length];
         ahorcado.setGanador(false);
+        actualizarTablero(ahorcado);
         do{
             encontradas(ahorcado);
             intentos(ahorcado);
@@ -100,11 +108,13 @@ public class AhorcadoService {
             System.out.println("Usted a perdido");
             System.out.println("==============El juego ah finalizado==============");
         }
+    }
 
-
-
-
-
+    public String[] actualizarTablero(Ahorcado ahoracado){
+        for (int i = 0; i < tablero.length; i++) {
+            this.tablero[i] = "_";
+        }
+        return tablero;
 
     }
 

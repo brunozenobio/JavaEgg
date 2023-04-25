@@ -2,6 +2,7 @@ package Servicios;
 
 import Entidades.Pelicula;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PeliculaServices {
@@ -19,6 +20,10 @@ public class PeliculaServices {
         System.out.print("Duracion en horas: ");
         p1.setDuracion(read.nextDouble());
         return p1;
+    }
+    public void duracionMayorUnaHora(ArrayList pelicula){
+        for (Pelicula peli:pelicula ){
 
+        }
     }
 }
